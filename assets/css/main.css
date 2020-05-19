@@ -3306,7 +3306,7 @@ input, select, textarea {
 						box-shadow: none;
 					}
 
-		#nav.alt {
+		/* #nav.alt {
 			position: fixed;
 			top: 0;
 			padding: 0.5em 1em;
@@ -3322,7 +3322,7 @@ input, select, textarea {
 
 				#nav.alt ul li a {
 					font-size: 0.9em;
-				}
+				} */
 
 		/* @media screen and (max-width: 736px) {
 
