@@ -3328,7 +3328,7 @@ input, select, textarea {
 
 			#nav {
 				/* display: none; */
-				width: device-width;
+				width: 67em;
 			}
 
 				/* #nav + #main {
