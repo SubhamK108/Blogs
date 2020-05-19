@@ -1,1 +1,1 @@
-# This are my [Blogs](https://SubhamK108.github.io/Blogs)
+# This are my [Blogs](https://SubhamK108.github.io/Blogs/)
