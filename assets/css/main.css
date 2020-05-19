@@ -3324,17 +3324,18 @@ input, select, textarea {
 					font-size: 0.9em;
 				} */
 
-		/* @media screen and (max-width: 736px) {
+		@media screen and (max-width: 736px) {
 
 			#nav {
-				display: none;
+				/* display: none; */
+				width: 100%;
 			}
 
-				#nav + #main {
+				/* #nav + #main {
 					padding-top: 0;
-				}
+				} */
 
-		} */
+		}
 
 /* Main */
 
