@@ -3233,7 +3233,7 @@ input, select, textarea {
 
 		#nav input, #nav select, #nav textarea {
 			color: #dddddd;
-			height: 1.8em;
+			height: 1.7em;
 			text-align: center;
 		}
 
@@ -3328,7 +3328,7 @@ input, select, textarea {
 
 			#nav {
 				/* display: none; */
-				width: calc(100% - 2em);
+				width: device-width;
 			}
 
 				/* #nav + #main {
