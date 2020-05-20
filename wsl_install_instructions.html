@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Installing WSL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<link rel="stylesheet" href="assets/css/main2.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1 style="font-size: 2em;">Instructions on The Windows Subsystem For Linux a.k.a WSL</h1>
+				<span class="logo"><img src="images/my_pic_very_small.png" alt="" /></span>
+				<h2>Subham K.</h2>
+				<p>May 6th, 2020</p>
+				<!-- <p>Just another free, fully responsive site template<br />
+				built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p> -->
+			</header>
+				
+				
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Introduction -->
+				<!-- <section id="intro" class="main special"> -->
+					<!-- <div class="spotlight" style="text-align: left;"> -->
+						<!-- <div class="content"> -->
+							<!-- <span class="image"><img src="images/my_pic_very_large.png" alt="" /></span> -->
+							<!-- <header class="major">
+								<h2>Subham Karmakar</h2>
+								<p style="font-weight: bold;">Coding / Programming || Cloud || Software || Computers || Football</p>
+							</header> -->
+							<!-- <p>
+								These are some of the frequently asked questions regarding WSL 2 (Windows Subsystem for Linux).
+								WSL 2 is a massive improvement over WSL 1. WSL 2 brings Full System-Call Compatibility 
+								and Much Faster I/O Performance. If you want to know about how to install/upgrade to WSL 2, 
+								check out <a href="install_instructions.html" style="font-weight: bold;">THIS</a> link.
+							</p> -->
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </section> -->
+
+
+				<!-- Content -->
+				<section id="content" class="main">
+
+					<!-- First Section -->
+					<section>
+						<header class="major">
+							<h3 style="font-weight: bold;">How to install WSL ?</h3>
+						</header>
+						<ul>
+							<li>Open the "Turn Windows features on or off" panel from the search bar.</li>
+							<li>Check two components:</li>
+								<code>1. Virtual Machine Platform</code><br>
+								<code>2. Windows Subsystem for Linux</code><br>
+								<br><img src="images/windows_features.png" alt="" style="max-width: 45%; height: auto;" /><br><br>
+							<li>Restart your PC.</li>
+							<li>Go to the Microsoft Store and search for Linux.</li>
+								<br><img src="images/microsoft_store.png" alt="" style="max-width: 55%; height: auto;" /><br><br>
+							<li>Install your favourite linux distro and open it from the Start menu.</li>
+							<li>On First Start, it'll complete the intallation of the distro and will take few seconds.</li>
+							<li>After that the distro is all yours !</li>
+						</ul>
+						<hr>
+					</section>
+
+					<!-- Second Section -->
+					<section>
+						<header class="major">
+							<h3 style="font-weight: bold;">Some useful WSL commands</h3>
+						</header>
+						<ul>
+							<li>Start your Default distro. <code>wsl</code></li>
+							<li>Start a specific distro. <code>wsl -d distroName</code></li>
+							<li>List all your distros and check their status. <code>wsl -l -v</code></li>
+							<li>Make a specific distro your Default distro. <code>wsl --set-default distroName</code></li>
+							<li>Change the version of your distro. <code>wsl --set-version distroName version(1 or 2)</code></li>
+							<li>Change your default WSL version. <code>wsl --set-default-version version(1 or 2)</code></li>
+							<li>Close all your running distros. <code>wsl --shutdown</code></li>
+							<li>Close a specific distro. <code>wsl --terminate distroName</code></li>
+							<li>Uninstall a distro. <code>wsl --unregister distroName</code></li>
+						</ul>
+					</section>
+
+
+				<!-- Get Started -->
+				<!-- <section id="cta" class="main special">
+					<header class="major">
+						<h2>Congue imperdiet</h2>
+						<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
+						posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+					</header>
+					<footer class="major">
+						<ul class="actions special">
+							<li><a href="generic.html" class="button primary">Get Started</a></li>
+							<li><a href="generic.html" class="button">Learn More</a></li>
+						</ul>
+					</footer>
+				</section> -->
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section style="text-align: center;">
+					<img src="images/my_pic_small.png" alt="" />
+					<h3 style="font-weight: bold;">Subham Karmakar</h3>
+					<p>Coding / Programming || Cloud || Software || Computers || Football</p>
+					<a href="https://SubhamK108.github.io" class="button">About Me</a>
+					<a href="index.html" class="button">My Blogs</a>
+				</section>
+				<section>
+					<h2 style="text-align: center;">Follow</h2>
+					<ul class="icons" style="text-align: center;">
+						<!-- <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li> -->
+						<!-- <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li> -->
+						<!-- <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li> -->
+						<!-- <li><a href="#" class="icon brands fa-linkedin-in alt"><span class="label">Dribbble</span></a></li> -->
+						<li><a href="https://www.github.com/SubhamK108" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.hackerrank.com/SubhamK108" class="icon brands fa-hackerrank alt"><span class="label">Dribbble</span></a></li>
+						<li><a href="https://www.leetcode.com/SubhamK108" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+					</ul>
+				</section>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
