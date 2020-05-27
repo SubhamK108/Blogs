@@ -29,10 +29,8 @@
 					<div class="spotlight" style="text-align: left;">
 						<div class="content">
 							<p>
-								These are some of the frequently asked questions regarding WSL 2 (Windows Subsystem for Linux).
-								WSL 2 is a massive improvement over WSL 1. WSL 2 brings Full System-Call Compatibility 
-								and Much Faster I/O Performance. If you want to know about how to install/upgrade to WSL 2, 
-								check out <a href="wsl_install_instructions.html" style="font-weight: bold;">THIS</a> link.
+								Often when I show something in my terminal, people ask me, how do I make my prompt 
+								look like that? Well, the secret behind that is Powerline.
 							</p>
 						</div>
 					</div>
@@ -45,106 +43,91 @@
 					<!-- First Section -->
 					<section>
 						<header class="major">
-							<h3 style="font-weight: bold;">How to set Default Username in your distro ?</h3>
+							<h3 style="font-weight: bold;">Step 1: Get the Terminal</h3>
 						</header>
-						<ul>
-							Method 1: Using PowerShell<br>
-							<li>Open PowerShell and type the command: <code>distroName config --default-user username</code></li>
-							
-							<br><br>Method 2: Using your distro<br>
-							<li>Command: <code>cd</code></li>
-							<li>Command: <code>touch /etc/wsl.conf</code></li>
-							<li>Command: <code>nano /etc/wsl.conf</code></li><br>
-								Edit the wsl.conf file with the following:
-									<pre><code>[user]
-default=username</code></pre>						
-								Save and Exit<br><br>
-							<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
-							<li>Open your wsl distro to verify change.</li>
-						</ul>
+						<p>
+							Get a terminal that supports powerline and font-ligatures. If you're on Windows 10, you 
+							can download the Windows Terminal from the <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701#activetab=pivot:overviewtab">Microsoft Store</a>.
+							If you're already using the Windows Terminal, make sure you enable the font-ligatures within the settings.<br>
+							If you're on Linux, you can use Konsole, which supports font-ligatures. You can install Konsole using 
+							the command <code>sudo apt install konsole</code>. After that enable font-ligatures within the settings.
+						</p>
 						<hr>
 					</section>
 
 					<!-- Second Section -->
 					<section>
 						<header class="major">
-							<h3 style="font-weight: bold;">How to MOVE your WSL distro (Version 1 or 2) to another drive (outside of C:) ?</h3>
+							<h3 style="font-weight: bold;">Step 2: Install Git</h3>
 						</header>
 						<p>
-							Here I am MOVING my Ubuntu distro from C: drive to a folder in D: drive named "Ubuntu_20.04_LTS"
+							Head over to <a href="https://git-scm.com/downloads">this</a> website and download Git for your Operating System.
 						</p>
-						<ul>
-							<li>Open PowerShell</li>
-							<li>Command: <code>cd D:\</code></li>
-							<li>Command: <code>wsl --export Ubuntu ubuntu-wsl.tar</code></li>
-							[This exports the curent wsl distro (Ubuntu) as a .tar file (ubuntu-wsl.tar in this case)]
-							<li>Command: <code>wsl --unregister Ubuntu</code></li>
-								[This deletes/unregisters the current wsl distro (Ubuntu)]
-							<li>Command: <code>wsl --import Ubuntu .\Ubuntu_20.04_LTS\ .\ubuntu-wsl.tar</code></li>
-								[This imports/creates a new wsl distro named "Ubuntu" inside
-								the folder "Ubuntu_20.04_LTS" using the ubuntu-wsl.tar file]
-							<li>Copy all your files into your home/username/ directory of your wsl distro</li>
-							<li>Command: <code>wsl --set-version Ubuntu 2</code></li>
-								[Converts the wsl distro from version 1 to 2]
-						</ul>
 						<hr>
 					</section>
-
+					
 					<!-- Third Section -->
 					<section>
 						<header class="major">
-							<h3 style="font-weight: bold;">How to increase the capacity of the wsl 2 distro (the vhdx capacity) ?</h3>
+							<h3 style="font-weight: bold;">Step 3: Get a PowerLine Glyphs supported font</h3>
 						</header>
-						<ul>
-							<li>First check the current capacity of your distro with Command: <code>df -h</code></li>
-							<li>Locate your vhdx file</li><br>
-							    <ul>
-									It's (Ubuntu in my case) default location can be found by:<br>
-									<li>Open PowerShell to get the PackageFamilyName</li>
-									<li>Command: <code>Get-AppxPackage -Name "*Ubuntu*" | Select PackageFamilyName</code></li>
-									<li>Locate the vhdx file: Open RUN > appdata > Local > Packages > PackageFamilyName > LocalState > disk.vhdx</li>
-								</ul>
-							<li>Open PowerShell and type command: <code>diskpart</code></li>
-							<li>Command: <code>Select vdisk file="PathToVHDX"</code></li>
-							<li>Command: <code>expand vdisk maximum="SizeInMB"</code></li>
-							<li>Command: <code>Exit</code></li>
-							<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
-							<li>Open your wsl distro (Ubuntu in my case)</li>
-							<li>Command: <code>sudo mount -t devtmpfs none /dev</code></li>
-							<li>Command: <code>mount | grep ext4</code>
-								[Copy the name of the entry: /dev/sdXX]
-							<li>Command: <code>sudo resize2fs /dev/sdXX</code></li>
-							<li>If resize2fs is not installed then install by command: <code>sudo apt install resize2fs</code></li>
-							<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
-							<li>Open your wsl distro and type following command to verify the change: <code>df -h</code></li>
-						</ul>
+						<p>
+							Not all fonts support powerline glyphs and ligatures, and if you use any of those unsupported fonts, your powerline will look horrible. 
+							My personal favourite is Microsoft's Cascadia Code. You can download the font from <a href="https://github.com/microsoft/cascadia-code/releases">here</a>. 
+							Make sure you install the powerline version of the font, which has a filename: <code>CascadiaCodePL.ttf</code><br>
+							After that, set the font-face of your terminal to: <code>"Cascadia Code PL"</code><br>
+							If you want to try other fonts, you can go to <a href="https://www.nerdfonts.com/">Nerd Fonts</a> and make sure you 
+							get / generate one that includes PowerLine Glyphs.
+						</p>
 						<hr>
 					</section>
 
 					<!-- Fourth Section -->
 					<section>
 						<header class="major">
-							<h3 style="font-weight: bold;">How to change Ownership and Write Permissions of a directory/folder in linux ?</h3>
+							<h3 style="font-weight: bold;">Step 4 (For PowerShell users): Install and Enable Powerline</h3>
 						</header>
-						<ul>
-							<li>Command: <code>sudo chown -R username pathToDirectory</code></li>
-								[Changes the Ownership]
-							<li>Command: <code>sudo chmod -R 755 pathToDirectory</code></li>
-								[Changes the Write Permissions]
-						</ul>
+						<img src="../images/powerline_powershell.png" alt="" style="max-width: 100%; height: auto;"><br><br>
+						<p>
+							Courtesy to the instructions given in <a href="https://github.com/JanDeDobbeleer/oh-my-posh">this GitHub repository</a>, install Posh-Git and Oh-My-Posh.
+							<pre><code>Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser</code></pre>
+							Run these commands from PowerShell or PowerShell Core (in Linux). When you run Install-Module for the first time you'll get a warning that you're 
+							downloading and installing stuff from the internet so follow the prompts appropriately.<br>
+							If you're using PowerShell Core, you also need to get <a href="https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-6">PSReadline</a>.
+							Run the following command in PowerShell Core:
+							<pre><code>Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck</code></pre>
+							Then run <code>notepad $PROFILE</code> then add the following lines at the very end:
+							<pre><code>Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox</code></pre>
+							That "Paradox" at the end is the name of a theme. You can choose your favourite theme from <a href="https://github.com/JanDeDobbeleer/oh-my-posh#themes">here</a>.
+						</p>
 						<hr>
 					</section>
-
+					
 					<!-- Fifth Section -->
 					<section>
 						<header class="major">
-							<h3 style="font-weight: bold;">How to uninstall a wsl distro ?</h3>
+							<h3 style="font-weight: bold;">Step 4 (For Bash users): Install and Enable Powerline</h3>
 						</header>
-						<ul>
-							<li>Open PowerShell and type: <code>wsl --unregister distroName</code></li>
-							<li>Then manually Uninstall the Microsoft Store App from the Start Menu or Windows Settings.</li>
-						</ul>
+						<img src="../images/powerline_bash.png" alt="" style="max-width: 100%; height: auto;"><br><br>
+						<p>
+							My favourite is Powerline-Go, specifically because of its speed and low latency. Courtesy to the instructions given 
+							in <a href="https://github.com/justjanne/powerline-go">this GitHub repository</a>, install Go and then Powerline-Go.
+							<pre><code>sudo apt install golang-go
+go get -u github.com/justjanne/powerline-go</code></pre>
+							Then run <code>nano ~/.bashrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
+							<pre><code>GOPATH=$HOME/go
+function _update_ps1() {
+    PS1="$($GOPATH/bin/powerline-go -error $?)"
+}
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi</code></pre>
+						</p>
 					</section>
+
 
 				</section>
 
