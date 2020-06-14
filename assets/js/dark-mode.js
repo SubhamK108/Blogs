@@ -27,7 +27,7 @@ function toggleDarkMode() {
     }
 
     if (document.getElementById("content").className == "main") {
-        document.getElementById("content").className = "dark";
+        document.getElementById("content").className = "dark-main";
     } else {
         document.getElementById("content").className = "main";
     }
