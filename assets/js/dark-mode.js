@@ -1,5 +1,12 @@
 
 function toggleDarkMode() {
+    var darkSwitch = document.getElementById("darkModeSwitch");
+    if (darkSwitch.className == "icon solid fas fa-moon") {
+        darkSwitch.className = "icon solid fas fa-sun";
+    } else {
+        darkSwitch.className = "icon solid fas fa-moon";
+    }
+
     var element = document.body;
     element.classList.toggle("dark");
 
