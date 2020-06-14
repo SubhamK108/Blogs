@@ -3804,7 +3804,7 @@ input, select, textarea {
 			#dark-main input[type="button"].icon:before,
 			#dark-main button.icon:before,
 			#dark-main .button.icon:before {
-				color: rgba(99, 99, 99, 0.25);
+				color: rgba(199, 199, 199, 0.25);
 			}
 
 			#dark-main input[type="submit"].primary,
@@ -3897,23 +3897,23 @@ input, select, textarea {
 		}
 
 		#dark-main ::-webkit-input-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(199, 199, 199, 0.25) !important;
 		}
 
 		#dark-main :-moz-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(199, 199, 199, 0.25) !important;
 		}
 
 		#dark-main ::-moz-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(199, 199, 199, 0.25) !important;
 		}
 
 		#dark-main :-ms-input-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(199, 199, 199, 0.25) !important;
 		}
 
 		#dark-main .formerize-placeholder {
-			color: rgba(99, 99, 99, 0.25) !important;
+			color: rgba(199, 199, 199, 0.25) !important;
 		}
 
 		#dark-main .icon.major {
