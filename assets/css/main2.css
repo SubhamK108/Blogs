@@ -4925,7 +4925,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 768px) {
 
 			#wrapper {
 				max-width: 100%;
