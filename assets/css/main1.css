@@ -182,7 +182,7 @@ input, select, textarea {
 	body, input, select, textarea {
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 13.5pt;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.65;
 	}
 
@@ -3507,7 +3507,7 @@ input, select, textarea {
 			#main input[type="button"].icon:before,
 			#main button.icon:before,
 			#main .button.icon:before {
-				color: rgba(10, 10, 10, 0.25);
+				color: rgba(0, 0, 0, 0.25);
 			}
 
 			#main input[type="submit"].primary,
@@ -3600,23 +3600,23 @@ input, select, textarea {
 		}
 
 		#main ::-webkit-input-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main :-moz-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main ::-moz-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main :-ms-input-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main .formerize-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main .icon.major {
@@ -3855,7 +3855,7 @@ input, select, textarea {
 			#main-light input[type="button"].icon:before,
 			#main-light button.icon:before,
 			#main-light .button.icon:before {
-				color: rgba(10, 10, 10, 0.25);
+				color: rgba(0, 0, 0, 0.25);
 			}
 
 			#main-light input[type="submit"].primary,
@@ -3948,23 +3948,23 @@ input, select, textarea {
 		}
 
 		#main-light ::-webkit-input-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main-light :-moz-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main-light ::-moz-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main-light :-ms-input-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main-light .formerize-placeholder {
-			color: rgba(10, 10, 10, 0.25) !important;
+			color: rgba(0, 0, 0, 0.25) !important;
 		}
 
 		#main-light .icon.major {
@@ -4203,7 +4203,7 @@ input, select, textarea {
 			#main-dark input[type="button"].icon:before,
 			#main-dark button.icon:before,
 			#main-dark .button.icon:before {
-				color: rgba(199, 199, 199, 0.25);
+				color: rgba(255, 255, 255, 0.25);
 			}
 
 			#main-dark input[type="submit"].primary,
@@ -4296,23 +4296,23 @@ input, select, textarea {
 		}
 
 		#main-dark ::-webkit-input-placeholder {
-			color: rgba(199, 199, 199, 0.25) !important;
+			color: rgba(255, 255, 255, 0.25) !important;
 		}
 
 		#main-dark :-moz-placeholder {
-			color: rgba(199, 199, 199, 0.25) !important;
+			color: rgba(255, 255, 255, 0.25) !important;
 		}
 
 		#main-dark ::-moz-placeholder {
-			color: rgba(199, 199, 199, 0.25) !important;
+			color: rgba(255, 255, 255, 0.25) !important;
 		}
 
 		#main-dark :-ms-input-placeholder {
-			color: rgba(199, 199, 199, 0.25) !important;
+			color: rgba(255, 255, 255, 0.25) !important;
 		}
 
 		#main-dark .formerize-placeholder {
-			color: rgba(199, 199, 199, 0.25) !important;
+			color: rgba(255, 255, 255, 0.25) !important;
 		}
 
 		#main-dark .icon.major {
@@ -4552,7 +4552,7 @@ input, select, textarea {
 				#main input[type="button"].icon:before,
 				#main button.icon:before,
 				#main .button.icon:before {
-					color: rgba(199, 199, 199, 0.25);
+					color: rgba(255, 255, 255, 0.25);
 				}
 		
 				#main input[type="submit"].primary,
@@ -4645,23 +4645,23 @@ input, select, textarea {
 			}
 		
 			#main ::-webkit-input-placeholder {
-				color: rgba(199, 199, 199, 0.25) !important;
+				color: rgba(255, 255, 255, 0.25) !important;
 			}
 		
 			#main :-moz-placeholder {
-				color: rgba(199, 199, 199, 0.25) !important;
+				color: rgba(255, 255, 255, 0.25) !important;
 			}
 		
 			#main ::-moz-placeholder {
-				color: rgba(199, 199, 199, 0.25) !important;
+				color: rgba(255, 255, 255, 0.25) !important;
 			}
 		
 			#main :-ms-input-placeholder {
-				color: rgba(199, 199, 199, 0.25) !important;
+				color: rgba(255, 255, 255, 0.25) !important;
 			}
 		
 			#main .formerize-placeholder {
-				color: rgba(199, 199, 199, 0.25) !important;
+				color: rgba(255, 255, 255, 0.25) !important;
 			}
 		
 			#main .icon.major {
@@ -4922,7 +4922,15 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#wrapper {
-				max-width: calc(100% - 2em);
+				max-width: 100%
+			}
+
+		}
+		
+		@media screen and (max-width: 1280px) {
+
+			#wrapper {
+				max-width: 100%;
 			}
 
 		}
