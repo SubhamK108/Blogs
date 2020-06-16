@@ -1908,6 +1908,12 @@ input, select, textarea {
 		white-space: nowrap;
 	}
 
+	.add-button {
+		position: absolute;
+		top: 1px;
+		left: 1px;
+	}
+
 		input[type="submit"].icon,
 		input[type="reset"].icon,
 		input[type="button"].icon,
