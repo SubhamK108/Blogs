@@ -3159,12 +3159,13 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 5em 5em 1em 5em ;
+		padding: 7em 5em 4em 5em ;
 		text-align: center;
 	}
 
 		#header h1 {
 			margin: 0 0 0.7em 0;
+			font-size: 3.25em;
 		}
 
 		#header h2 {
@@ -3176,6 +3177,17 @@ input, select, textarea {
 			font-size: 0.8em;
 			/* letter-spacing: -0.025em; */
 		}
+
+		#header .logo {
+			display: block;
+			margin: 0 0 0.2em 0;
+		}
+
+			#header .logo img {
+				display: block;
+				margin: 0 auto;
+				max-width: 75%;
+			}
 
 		#header.alt {
 			padding: 7em 5em 4em 5em ;
@@ -3219,7 +3231,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#header {
-				padding: 4em 4em 0.1em 4em ;
+				padding: 6em 4em 3em 4em ;
 			}
 
 				#header.alt {
@@ -3231,7 +3243,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#header {
-				padding: 4em 3em 0.1em 3em ;
+				padding: 5em 3em 2em 3em ;
 			}
 
 				#header.alt {
@@ -3243,8 +3255,12 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding: 3em 2em 0.1em 2em ;
+				padding: 4em 2em 1em 2em ;
 			}
+
+				#header h1 {
+					font-size: 2.5em;
+				}
 
 				#header p {
 					font-size: 0.8em;
@@ -3268,7 +3284,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#header {
-				padding: 3em 1.5em 0.1em 1.5em ;
+				padding: 4em 1.5em 1em 1.5em ;
 			}
 
 				#header.alt {
@@ -3280,7 +3296,7 @@ input, select, textarea {
 		@media screen and (max-width: 360px) {
 
 			#header {
-				padding: 2.5em 1em 0.1em 1em ;
+				padding: 3.5em 1em 0.5em 1em ;
 			}
 
 				#header.alt {
