@@ -3370,7 +3370,7 @@ input, select, textarea {
 		}
 
 		#nav code {
-			background: rgba(222, 222, 222, 0.25);
+			background: rgba(209, 209, 209, 0.25);
 			border-color: #dddddd;
 		}
 
@@ -3422,7 +3422,7 @@ input, select, textarea {
 				}
 
 					#nav ul li a:hover {
-						background-color: rgba(222, 222, 222, 0.25);
+						background-color: rgba(209, 209, 209, 0.25);
 					}
 
 					#nav ul li a.active {
@@ -3497,7 +3497,7 @@ input, select, textarea {
 		}
 
 		#main code {
-			background: rgba(222, 222, 222, 0.25);
+			background: rgba(209, 209, 209, 0.25);
 			border-color: #dddddd;
 		}
 
@@ -3524,7 +3524,7 @@ input, select, textarea {
 			#main input[type="button"]:hover,
 			#main button:hover,
 			#main .button:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(209, 209, 209, 0.25);
 			}
 
 			#main input[type="submit"]:active,
@@ -3586,7 +3586,7 @@ input, select, textarea {
 		#main input[type="email"],
 		#main select,
 		#main textarea {
-			background-color: rgba(222, 222, 222, 0.25);
+			background-color: rgba(209, 209, 209, 0.25);
 			border-color: #dddddd;
 		}
 
@@ -3615,7 +3615,7 @@ input, select, textarea {
 
 			#main input[type="checkbox"] + label:before,
 			#main input[type="radio"] + label:before {
-				background: rgba(222, 222, 222, 0.25);
+				background: rgba(209, 209, 209, 0.25);
 				border-color: #dddddd;
 			}
 
@@ -3666,7 +3666,7 @@ input, select, textarea {
 		}
 
 			#main .icon.alt:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(209, 209, 209, 0.25);
 			}
 
 			#main .icon.alt:active {
@@ -3694,7 +3694,7 @@ input, select, textarea {
 		}
 
 			#main table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(209, 209, 209, 0.25);
 			}
 
 		#main table th {
@@ -3845,7 +3845,7 @@ input, select, textarea {
 		}
 
 		#main-light code {
-			background: rgba(222, 222, 222, 0.25);
+			background: rgba(209, 209, 209, 0.25);
 			border-color: #dddddd;
 		}
 
@@ -3872,7 +3872,7 @@ input, select, textarea {
 			#main-light input[type="button"]:hover,
 			#main-light button:hover,
 			#main-light .button:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(209, 209, 209, 0.25);
 			}
 
 			#main-light input[type="submit"]:active,
@@ -3934,7 +3934,7 @@ input, select, textarea {
 		#main-light input[type="email"],
 		#main-light select,
 		#main-light textarea {
-			background-color: rgba(222, 222, 222, 0.25);
+			background-color: rgba(209, 209, 209, 0.25);
 			border-color: #dddddd;
 		}
 
@@ -3963,7 +3963,7 @@ input, select, textarea {
 
 			#main-light input[type="checkbox"] + label:before,
 			#main-light input[type="radio"] + label:before {
-				background: rgba(222, 222, 222, 0.25);
+				background: rgba(209, 209, 209, 0.25);
 				border-color: #dddddd;
 			}
 
@@ -4014,7 +4014,7 @@ input, select, textarea {
 		}
 
 			#main-light .icon.alt:hover {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(209, 209, 209, 0.25);
 			}
 
 			#main-light .icon.alt:active {
@@ -4042,7 +4042,7 @@ input, select, textarea {
 		}
 
 			#main-light table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(209, 209, 209, 0.25);
 			}
 
 		#main-light table th {
@@ -4390,7 +4390,7 @@ input, select, textarea {
 		}
 
 			#main-dark table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(222, 222, 222, 0.25);
+				background-color: rgba(209, 209, 209, 0.25);
 			}
 
 		#main-dark table th {
@@ -4739,7 +4739,7 @@ input, select, textarea {
 			}
 		
 				#main table tbody tr:nth-child(2n + 1) {
-					background-color: rgba(222, 222, 222, 0.25);
+					background-color: rgba(209, 209, 209, 0.25);
 				}
 		
 			#main table th {
