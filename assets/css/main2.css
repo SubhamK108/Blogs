@@ -4975,3 +4975,18 @@ input, select, textarea {
 			}
 
 		}
+
+
+/* Side-By-Side Images Layout */
+
+	.row {
+		display: flex;
+		text-align: center;
+		margin: 0;
+		justify-content: space-around;
+	}
+		
+	.column {
+		flex: 33.33%;
+		padding: 25px;
+	}
