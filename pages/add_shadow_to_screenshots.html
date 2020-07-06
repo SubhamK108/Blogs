@@ -45,12 +45,12 @@
 									<div class="column">
 										Image without drop shadow
 										<br><br>
-										<img src="../images/add_shadows_1.png" alt="" style="max-width: 310px; height: auto;" />
+										<img src="../images/add_shadows_1.png" alt="" style="max-width: 400px; height: auto;" />
 									</div>
 									<div class="column"">
 										Image with drop shadow
 										<br>
-										<img src="../images/add_shadows.png" alt="" style="max-width: 360px; height: auto; padding-top: 1em;" />
+										<img src="../images/add_shadows.png" alt="" style="max-width: 430px; height: auto; padding-top: 1em;" />
 									</div>
 								</div>
 								
@@ -95,7 +95,7 @@
 							<li>Run <code>nano Add_Shadow.sh</code> and paste the following code.</li>
 								<pre><code>#!/bin/bash
 
-convert "$1" \( +clone -background black -shadow 50x19+0+18 \) +swap -background transparent -layers merge +repage "$1"</code></pre>
+convert "$1" \( +clone -background black -shadow 57x15+0+13 \) +swap -background transparent -layers merge +repage "$1"</code></pre>
 
 						</ul>
 						<hr>
@@ -125,6 +125,11 @@ convert "$1" \( +clone -background black -shadow 50x19+0+18 \) +swap -background
 						<p>
 							Suppose you have an image named "myImage.png" in a folder named "Pictures". Then to add drop 
 							shadow to that image run the command: <code>shadow Pictures/myImage.png</code>
+						</p>
+
+						<p>
+							If, suppose, you're a Windows user and you have an image named "profile.png" in a folder named 
+							"MyImages" inside your D: drive, then you can use the command: <code>shadow /mnt/d/MyImages/profile.png</code>
 						</p>
 
 						<p>
