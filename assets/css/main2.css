@@ -4983,10 +4983,11 @@ input, select, textarea {
 		display: flex;
 		text-align: center;
 		margin: 0;
-		justify-content: space-around;
+		padding-top: 1em;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
 	}
-		
-	.column {
-		flex: 33.33%;
-		padding: 25px;
+
+	.row > div {
+		padding-bottom: 2em;
 	}
