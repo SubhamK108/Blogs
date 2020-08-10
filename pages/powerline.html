@@ -117,7 +117,7 @@ Set-Theme Paradox</code></pre>
 					<!-- Fifth Section -->
 					<section>
 						<header class="major">
-							<h3 style="font-weight: bold;">Step 4 (For Bash users): Install and Enable Powerline</h3>
+							<h3 style="font-weight: bold;">Step 4 (For Bash/ZSH users): Install and Enable Powerline</h3>
 						</header>
 						<img src="../images/powerline_bash.png" alt="" style="max-width: 100%; height: auto;"><br><br>
 						<p>
@@ -125,13 +125,33 @@ Set-Theme Paradox</code></pre>
 							in <a href="https://github.com/justjanne/powerline-go">this GitHub repository</a>, install Go and then Powerline-Go.
 							<pre><code>sudo apt install golang-go
 go get -u github.com/justjanne/powerline-go</code></pre>
-							Then run <code>nano ~/.bashrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
+
+							If you are using Bash, run <code>nano ~/.bashrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
 							<pre><code>GOPATH=$HOME/go
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $?)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -cwd-max-depth 1 -modules venv,user,host,ssh,cwd,perms,git,hg,jobs,exit)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi</code></pre>
+
+							If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
+							<pre><code>GOPATH=$HOME/go
+function powerline_precmd() {
+    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-max-depth 1 -modules venv,user,host,ssh,cwd,perms,git,hg,jobs,exit)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
 fi</code></pre>
 						</p>
 					</section>
