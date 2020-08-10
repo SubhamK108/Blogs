@@ -110,6 +110,8 @@ Install-Module oh-my-posh -Scope CurrentUser</code></pre>
 Import-Module oh-my-posh
 Set-Theme Paradox</code></pre>
 							That "Paradox" at the end is the name of a theme. You can choose your favourite theme from <a href="https://github.com/JanDeDobbeleer/oh-my-posh#themes">here</a>.
+							Hide your username@domain when not in a virtual machine:
+							<pre><code>$DefaultUser = 'yourUsernameHere'</code></pre>
 						</p>
 						<hr>
 					</section>
@@ -129,7 +131,7 @@ go get -u github.com/justjanne/powerline-go</code></pre>
 							If you are using Bash, run <code>nano ~/.bashrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
 							<pre><code>GOPATH=$HOME/go
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -cwd-max-depth 1 -modules venv,user,host,ssh,cwd,perms,git,hg,jobs,exit)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -cwd-max-depth 1 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
@@ -138,7 +140,7 @@ fi</code></pre>
 							If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
 							<pre><code>GOPATH=$HOME/go
 function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-max-depth 1 -modules venv,user,host,ssh,cwd,perms,git,hg,jobs,exit)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-max-depth 1 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
 }
 
 function install_powerline_precmd() {
