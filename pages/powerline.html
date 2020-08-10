@@ -101,7 +101,7 @@
 							<pre><code>Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser</code></pre>
 							Run these commands from PowerShell or PowerShell Core (in Linux). When you run Install-Module for the first time you'll get a warning that you're 
-							downloading and installing stuff from the internet so follow the prompts appropriately.<br>
+							downloading and installing stuff from the internet so follow the prompts appropriately.<br><br>
 							If you're using PowerShell Core, you also need to get <a href="https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-6">PSReadline</a>.
 							Run the following command in PowerShell Core:
 							<pre><code>Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck</code></pre>
@@ -109,7 +109,7 @@ Install-Module oh-my-posh -Scope CurrentUser</code></pre>
 							<pre><code>Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox</code></pre>
-							That "Paradox" at the end is the name of a theme. You can choose your favourite theme from <a href="https://github.com/JanDeDobbeleer/oh-my-posh#themes">here</a>.
+							That "Paradox" at the end is the name of a theme. You can choose your favourite theme from <a href="https://github.com/JanDeDobbeleer/oh-my-posh#themes">here</a>.<br><br>
 							Hide your username@domain when not in a virtual machine:
 							<pre><code>$DefaultUser = 'yourUsernameHere'</code></pre>
 						</p>
@@ -131,7 +131,7 @@ go get -u github.com/justjanne/powerline-go</code></pre>
 							If you are using Bash, run <code>nano ~/.bashrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
 							<pre><code>GOPATH=$HOME/go
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -cwd-max-depth 1 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -cwd-max-depth 2 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
@@ -140,7 +140,7 @@ fi</code></pre>
 							If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
 							<pre><code>GOPATH=$HOME/go
 function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-max-depth 1 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-max-depth 2 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
 }
 
 function install_powerline_precmd() {
