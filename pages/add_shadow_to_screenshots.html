@@ -107,8 +107,11 @@ convert "$1" \( +clone -background black -shadow 57x15+0+13 \) +swap -background
 							<h3 style="font-weight: bold;">STEP 3: Add an Alias in your .bashrc config file</h3>
 						</header>
 						<p>
-							Run <code>nano .bashrc</code> and add the following line at the end.
+							If you are using Bash, run <code>nano ~/.bashrc</code> and add the following line at the end.
 							<pre><code>alias shadow='bash ~/[Path to the Script]/Add_Shadow.sh'</code></pre>
+
+							If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following line at the end.
+							<pre><code>alias shadow='zsh ~/[Path to the Script]/Add_Shadow.sh'</code></pre>
 						</p>
 						<hr>
 					</section>
