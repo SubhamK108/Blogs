@@ -110,8 +110,8 @@ Install-Module oh-my-posh -Scope CurrentUser</code></pre>
 Import-Module oh-my-posh
 Set-Theme Paradox</code></pre>
 							That "Paradox" at the end is the name of a theme. You can choose your favourite theme from <a href="https://github.com/JanDeDobbeleer/oh-my-posh#themes">here</a>.<br><br>
-							Hide your username@domain when not in a virtual machine:
-							<pre><code>$DefaultUser = 'yourUsernameHere'</code></pre>
+							If you want to hide your username@domain when not in a virtual machine, run <code>notepad $PROFILE</code> and add the following line at the top:
+							<pre><code>$DefaultUser = [System.Environment]::UserName</code></pre>
 						</p>
 						<hr>
 					</section>
@@ -155,6 +155,9 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi</code></pre>
+
+							If you want to view your username@domain, delete the <code>-hostname-only-if-ssh</code> and add a 
+							module <code>user</code> before <code>host</code> int the <code>PS1=</code> line.
 						</p>
 					</section>
 
