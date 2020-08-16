@@ -1,1 +1,1 @@
-# These are my [Blogs](https://blogs.subhamk.com)
+# These are my [blogs](https://blogs.subhamk.com)
