@@ -1,150 +1,176 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Add Drop Shadow to Screenshots taken in Windows and Linux using the Bash shell.</title>
-		<meta name="description" content="How to add drop shadow to your screenshots taken in Windows and Linux using the command line or bash shell.">
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-		<link rel="manifest" href="../site.webmanifest">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-		<link rel="stylesheet" href="../assets/css/main2.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
 
-	<body class="is-preload" onload="GetTheme()">
+<head>
+	<title>Add Drop Shadow to Screenshots taken in Windows and Linux using the Bash shell.</title>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title"
+		content="Add Drop Shadow to Screenshots taken in Windows and Linux using the Bash shell." />
+	<meta property="og:title"
+		content="Add Drop Shadow to Screenshots taken in Windows and Linux using the Bash shell." />
+	<!-- <meta property="og:type" content="video.movie" /> -->
+	<meta property="og:url" content="https://blogs.subhamk.com/pages/add_shadow_to_screenshots.html" />
+	<meta property="og:image" content="https://blogs.subhamk.com/images/square_crop_less.jpg" />
+	<meta property="og:description"
+		content="How to add drop shadow to your screenshots taken in Windows and Linux using the command line or bash shell." />
+	<meta name="description"
+		content="How to add drop shadow to your screenshots taken in Windows and Linux using the command line or bash shell.">
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="manifest" href="../site.webmanifest">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="../assets/css/main2.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+<body class="is-preload" onload="GetTheme()">
 
-			<!-- Header -->
-			<header id="header">
-				<h1 style="font-size: 2em;">Add Drop Shadow to Screenshots taken in Windows and Linux using the Bash shell</h1>
-				<span class="logo"><img src="../images/square_crop_less.jpg" alt="" style="max-width: 60px; border-radius: 50%;" /></span>
-				<h2>Subham K.</h2>
-				<p>July 5th, 2020</p>
-				<a id="themeSwitch" onclick="ToggleTheme()" class="" style="margin-top: 1.3em;" title="Change Theme"></a>
-			</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				
-			<!-- Main -->
-			<div id="main">
+		<!-- Header -->
+		<header id="header">
+			<h1 style="font-size: 2em;">Add Drop Shadow to Screenshots taken in Windows and Linux using the Bash shell
+			</h1>
+			<span class="logo"><img src="../images/square_crop_less.jpg" alt=""
+					style="max-width: 60px; border-radius: 50%;" /></span>
+			<h2>Subham K.</h2>
+			<p>July 5th, 2020</p>
+			<a id="themeSwitch" onclick="ToggleTheme()" class="" style="margin-top: 1.3em;" title="Change Theme"></a>
+		</header>
 
-				<!-- Introduction -->
-				<section id="intro" class="main special">
-					<div class="spotlight" style="text-align: left;">
-						<div class="content">
-							<p>
-                                Adding drop shadow to your screenshots is great, specially if you're going to use those screenshots in your 
-                                website, blogs or any other creative place. Drop shadow makes the images more beautiful and helps to enhance 
-								content. Here is an example:
-								
-								<div class="row">
-									<div>
-										Image without drop shadow
-										<br><br>
-										<img src="../images/add_shadows_1.png" alt="" style="max-width: 340px; height: auto;" />
-									</div>
-									<div>
-										Image with drop shadow
-										<br>
-										<img src="../images/add_shadows.png" alt="" style="max-width: 370px; height: auto; padding-top: 1em;" />
-									</div>
-								</div>
-								
-								If you're running MacOS, by default, all your screenshots will have drop shadow. But, if you're on Windows or 
-								Linux, then your screenshots won't have drop shadow by default. But that doesn't mean you can't have them. With 
-								a tool called "imagemagic" and a simple Bash Script, you can add drop shadow to your Windows or Linux screenshots 
-								as well.
-							</p>
-							
-							<p>
-								This method requires the Bash Shell, so if you are using Windows, make sure you enable WSL (Windows Subsystem 
-								for Linux). If you need help on how to enable and use WSL, you can check out my blog on the same 
-								<a href="wsl_install_instructions.html" style="font-weight: bold;">HERE</a>.
-							</p>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Introduction -->
+			<section id="intro" class="main special">
+				<div class="spotlight" style="text-align: left;">
+					<div class="content">
+						<p>
+							Adding drop shadow to your screenshots is great, specially if you're going to use those
+							screenshots in your
+							website, blogs or any other creative place. Drop shadow makes the images more beautiful and
+							helps to enhance
+							content. Here is an example:
+
+						<div class="row">
+							<div>
+								Image without drop shadow
+								<br><br>
+								<img src="../images/add_shadows_1.png" alt="" style="max-width: 340px; height: auto;" />
+							</div>
+							<div>
+								Image with drop shadow
+								<br>
+								<img src="../images/add_shadows.png" alt=""
+									style="max-width: 370px; height: auto; padding-top: 1em;" />
+							</div>
 						</div>
+
+						If you're running MacOS, by default, all your screenshots will have drop shadow. But, if you're
+						on Windows or
+						Linux, then your screenshots won't have drop shadow by default. But that doesn't mean you can't
+						have them. With
+						a tool called "imagemagic" and a simple Bash Script, you can add drop shadow to your Windows or
+						Linux screenshots
+						as well.
+						</p>
+
+						<p>
+							This method requires the Bash Shell, so if you are using Windows, make sure you enable WSL
+							(Windows Subsystem
+							for Linux). If you need help on how to enable and use WSL, you can check out my blog on the
+							same
+							<a href="wsl_install_instructions.html" style="font-weight: bold;">HERE</a>.
+						</p>
 					</div>
+				</div>
+			</section>
+
+
+			<!-- Content -->
+			<section id="content" class="main">
+
+				<!-- First Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">STEP 1: Install ImageMagic</h3>
+					</header>
+					<p>
+						Open your terminal (which uses a Bash Shell) and type the command:
+						<code>sudo apt install imagemagick</code>
+					</p>
+					<hr>
 				</section>
 
-
-				<!-- Content -->
-				<section id="content" class="main">
-
-					<!-- First Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">STEP 1: Install ImageMagic</h3>
-						</header>
-						<p>
-							Open your terminal (which uses a Bash Shell) and type the command: <code>sudo apt install imagemagick</code>
-						</p>
-						<hr>
-					</section>
-					
-					<!-- Second Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">STEP 2: Make a Bash Script</h3>
-						</header>
-						<ul>
-							<li>Navigate to any desired folder and type the command: <code>touch Add_Shadow.sh</code>. 
-								This creates an empty file named "Add_Shadow.sh.</li>
-							<li>Run <code>nano Add_Shadow.sh</code> and paste the following code.</li>
-								<pre><code>#!/bin/bash
+				<!-- Second Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">STEP 2: Make a Bash Script</h3>
+					</header>
+					<ul>
+						<li>Navigate to any desired folder and type the command: <code>touch Add_Shadow.sh</code>.
+							This creates an empty file named "Add_Shadow.sh.</li>
+						<li>Run <code>nano Add_Shadow.sh</code> and paste the following code.</li>
+						<pre><code>#!/bin/bash
 
 convert "$1" \( +clone -background black -shadow 57x15+0+13 \) +swap -background transparent -layers merge +repage "$1"</code></pre>
 
-						</ul>
-						<hr>
-					</section>
-
-					<!-- Third Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">STEP 3: Add an Alias in your .bashrc config file</h3>
-						</header>
-						<p>
-							If you are using Bash, run <code>nano ~/.bashrc</code> and add the following line at the end.
-							<pre><code>alias shadow='bash ~/[Path to the Script]/Add_Shadow.sh'</code></pre>
-
-							If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following line at the end.
-							<pre><code>alias shadow='zsh ~/[Path to the Script]/Add_Shadow.sh'</code></pre>
-						</p>
-						<hr>
-					</section>
-					
-					<!-- Fourth Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">STEP 4: Usage Instructions</h3>
-						</header>
-						<p>
-							Syntax: <code>shadow [Path/]Filename.png</code>
-						</p>
-
-						<p>
-							Suppose you have an image named "myImage.png" in a folder named "Pictures". Then to add drop 
-							shadow to that image run the command: <code>shadow Pictures/myImage.png</code>
-						</p>
-
-						<p>
-							If, suppose, you're a Windows user and you have an image named "profile.png" in a folder named 
-							"MyImages" inside your D: drive, then you can use the command: <code>shadow /mnt/d/MyImages/profile.png</code>
-						</p>
-
-						<p>
-							HAVE FUN :)
-						</p>
-					</section>
-
+					</ul>
+					<hr>
 				</section>
 
+				<!-- Third Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">STEP 3: Add an Alias in your .bashrc config file</h3>
+					</header>
+					<p>
+						If you are using Bash, run <code>nano ~/.bashrc</code> and add the following line at the end.
+					<pre><code>alias shadow='bash ~/[Path to the Script]/Add_Shadow.sh'</code></pre>
 
-				<!-- Get Started -->
-				<!-- <section id="cta" class="main special">
+					If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following line at the end.
+					<pre><code>alias shadow='zsh ~/[Path to the Script]/Add_Shadow.sh'</code></pre>
+					</p>
+					<hr>
+				</section>
+
+				<!-- Fourth Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">STEP 4: Usage Instructions</h3>
+					</header>
+					<p>
+						Syntax: <code>shadow [Path/]Filename.png</code>
+					</p>
+
+					<p>
+						Suppose you have an image named "myImage.png" in a folder named "Pictures". Then to add drop
+						shadow to that image run the command: <code>shadow Pictures/myImage.png</code>
+					</p>
+
+					<p>
+						If, suppose, you're a Windows user and you have an image named "profile.png" in a folder named
+						"MyImages" inside your D: drive, then you can use the command:
+						<code>shadow /mnt/d/MyImages/profile.png</code>
+					</p>
+
+					<p>
+						HAVE FUN :)
+					</p>
+				</section>
+
+			</section>
+
+
+			<!-- Get Started -->
+			<!-- <section id="cta" class="main special">
 					<header class="major">
 						<h2>Congue imperdiet</h2>
 						<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
@@ -158,44 +184,50 @@ convert "$1" \( +clone -background black -shadow 57x15+0+13 \) +swap -background
 					</footer>
 				</section> -->
 
-			</div>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<section style="text-align: center;">
-					<img src="../images/square_crop_less.jpg" alt="" style="max-width: 93px; border-radius: 50%;" />
-					<h3 style="font-weight: bold;">Subham Karmakar</h3>
-					<p>Coding / Programming || Cloud || Software || Computers || Football</p>
-					<a href="https://www.subhamk.com" class="button">About Me</a>
-					<a href="https://blogs.subhamk.com" class="button">My Blogs</a>
-					<a href="https://cheatsheets.subhamk.com" class="button">My CheatSheets</a>
-				</section>
-				<section>
-					<h2 style="text-align: center;">Follow</h2>
-					<ul class="icons" style="text-align: center;">
-						<!-- <li><a href="#" class="icon brands fa-twitter alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-facebook-f alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-instagram alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-linkedin-in alt"></a></li> -->
-						<li><a href="https://www.github.com/SubhamK108" class="icon brands fab fa-github alt" title="GitHub"></a></li>
-						<li><a href="https://www.hackerrank.com/SubhamK108" class="icon brands fab fa-hackerrank alt" title="HackerRank"></a></li>
-						<li><a href="https://www.leetcode.com/SubhamK108" class="icon solid fas fa-code alt" title="LeetCode"></a></li>
-					</ul>
-				</section>
-			</footer>
-
 		</div>
 
-		<!-- Scripts -->
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/jquery.scrollex.min.js"></script>
-		<script src="../assets/js/jquery.scrolly.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
-		<script src="../assets/js/themeChanger.js"></script>
-		<script src="../assets/js/index.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<section style="text-align: center;">
+				<img src="../images/square_crop_less.jpg" alt="" style="max-width: 93px; border-radius: 50%;" />
+				<h3 style="font-weight: bold;">Subham Karmakar</h3>
+				<p>Coding / Programming || Cloud || Software || Computers || Football</p>
+				<a href="https://www.subhamk.com" class="button">About Me</a>
+				<a href="../index.html" class="button">My Blogs</a>
+			</section>
+			<section>
+				<h2 style="text-align: center;">Follow</h2>
+				<ul class="icons" style="text-align: center;">
+					<!-- <li><a href="#" class="icon brands fa-facebook-f alt"></a></li> -->
+					<!-- <li><a href="#" class="icon brands fa-instagram alt"></a></li> -->
+					<li><a href="https://www.github.com/SubhamK108" class="icon brands fab fa-github alt"
+							title="GitHub"></a></li>
+					<li><a href="https://www.twitter.com/SubhamK108" class="icon brands fab fa-twitter alt"
+							title="Twitter"></a></li>
+					<li><a href="https://www.linkedin.com/in/subham-karmakar-96024b200/"
+							class="icon brands fab fa-linkedin-in alt" title="LinkedIn"></a></li>
+					<li><a href="https://www.hackerrank.com/SubhamK108" class="icon brands fab fa-hackerrank alt"
+							title="HackerRank"></a></li>
+					<li><a href="https://www.leetcode.com/SubhamK108" class="icon solid fas fa-code alt"
+							title="LeetCode"></a></li>
+				</ul>
+			</section>
+			<p class="copyright">&copy; 2022 Subham Karmakar ● Design: <a href="https://html5up.net">HTML5 UP</a></p>
+		</footer>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script src="../assets/js/themeChanger.js"></script>
+	<script src="../assets/js/index.js"></script>
+
+</body>
+
 </html>

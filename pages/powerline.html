@@ -1,135 +1,165 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>How to make your prompt pretty in terminal with Powerline</title>
-		<meta name="description" content="How to install Powerline and make your prompt pretty in terminal.">
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-		<link rel="manifest" href="../site.webmanifest">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-		<link rel="stylesheet" href="../assets/css/main2.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
-	
-	<body class="is-preload" onload="GetTheme()">
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+<head>
+	<title>How to make your prompt pretty in terminal with Powerline</title>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="How to make your prompt pretty in terminal with Powerline" />
+	<meta property="og:title" content="How to make your prompt pretty in terminal with Powerline" />
+	<!-- <meta property="og:type" content="video.movie" /> -->
+	<meta property="og:url" content="https://blogs.subhamk.com/pages/powerline.html" />
+	<meta property="og:image" content="https://blogs.subhamk.com/images/square_crop_less.jpg" />
+	<meta property="og:description" content="How to install Powerline and make your prompt pretty in terminal." />
+	<meta name="description" content="How to install Powerline and make your prompt pretty in terminal.">
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="manifest" href="../site.webmanifest">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="../assets/css/main2.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
 
-			<!-- Header -->
-			<header id="header">
-				<h1 style="font-size: 2em;">How to make your prompt pretty in terminal with Powerline</h1>
-				<span class="logo"><img src="../images/square_crop_less.jpg" alt="" style="max-width: 60px; border-radius: 50%;" /></span>
-				<h2>Subham K.</h2>
-				<p>May 20th, 2020</p>
-				<a id="themeSwitch" onclick="ToggleTheme()" class="" style="margin-top: 1.3em;" title="Change Theme"></a>
-			</header>
-			
+<body class="is-preload" onload="GetTheme()">
 
-			<!-- Main -->
-			<div id="main">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Introduction -->
-				<section id="intro" class="main special">
-					<div class="spotlight" style="text-align: left;">
-						<div class="content">
-							<p>
-								Often when I show something in my terminal, people ask me, how do I make my prompt 
-								look like that? Well, the secret behind that is Powerline.
-							</p>
-						</div>
+		<!-- Header -->
+		<header id="header">
+			<h1 style="font-size: 2em;">How to make your prompt pretty in terminal with Powerline</h1>
+			<span class="logo"><img src="../images/square_crop_less.jpg" alt=""
+					style="max-width: 60px; border-radius: 50%;" /></span>
+			<h2>Subham K.</h2>
+			<p>May 20th, 2020</p>
+			<a id="themeSwitch" onclick="ToggleTheme()" class="" style="margin-top: 1.3em;" title="Change Theme"></a>
+		</header>
+
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Introduction -->
+			<section id="intro" class="main special">
+				<div class="spotlight" style="text-align: left;">
+					<div class="content">
+						<p>
+							Often when I show something in my terminal, people ask me, how do I make my prompt
+							look like that? Well, the secret behind that is Powerline.
+						</p>
 					</div>
+				</div>
+			</section>
+
+
+			<!-- Content -->
+			<section id="content" class="main">
+
+				<!-- First Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">Step 1: Get the Terminal</h3>
+					</header>
+					<p>
+						Get a terminal that supports powerline and font-ligatures. If you're on Windows 10, you
+						can download the Windows Terminal from the <a
+							href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701#activetab=pivot:overviewtab">Microsoft
+							Store</a>.
+						If you're already using the Windows Terminal, make sure you enable the font-ligatures within the
+						settings.<br><br>
+						If you're on Linux, you can use Konsole, which supports font-ligatures. You can install Konsole
+						using
+						the command <code>sudo apt install konsole</code>. After that enable font-ligatures within the
+						settings.
+					</p>
+					<hr>
 				</section>
 
+				<!-- Second Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">Step 2: Install Git</h3>
+					</header>
+					<p>
+						Head over to <a href="https://git-scm.com/downloads">this</a> website and download Git for your
+						Operating System.
+					</p>
+					<hr>
+				</section>
 
-				<!-- Content -->
-				<section id="content" class="main">
+				<!-- Third Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">Step 3: Get a PowerLine Glyphs supported font</h3>
+					</header>
+					<p>
+						Not all fonts support powerline glyphs and ligatures, and if you use any of those unsupported
+						fonts, your powerline will look horrible.
+						My personal favourite is Microsoft's Cascadia Code. You can download the font from <a
+							href="https://github.com/microsoft/cascadia-code/releases">here</a>.
+						Make sure you install the powerline version of the font, which has a filename:
+						<code>CascadiaCodePL.ttf</code><br>
+						After that, set the font-face of your terminal to: <code>"Cascadia Code PL"</code><br><br>
+						If you want to try other fonts, you can go to <a href="https://www.nerdfonts.com/">Nerd
+							Fonts</a> and make sure you
+						get / generate one that includes PowerLine Glyphs.
+					</p>
+					<hr>
+				</section>
 
-					<!-- First Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">Step 1: Get the Terminal</h3>
-						</header>
-						<p>
-							Get a terminal that supports powerline and font-ligatures. If you're on Windows 10, you 
-							can download the Windows Terminal from the <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701#activetab=pivot:overviewtab">Microsoft Store</a>.
-							If you're already using the Windows Terminal, make sure you enable the font-ligatures within the settings.<br><br>
-							If you're on Linux, you can use Konsole, which supports font-ligatures. You can install Konsole using 
-							the command <code>sudo apt install konsole</code>. After that enable font-ligatures within the settings.
-						</p>
-						<hr>
-					</section>
-
-					<!-- Second Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">Step 2: Install Git</h3>
-						</header>
-						<p>
-							Head over to <a href="https://git-scm.com/downloads">this</a> website and download Git for your Operating System.
-						</p>
-						<hr>
-					</section>
-					
-					<!-- Third Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">Step 3: Get a PowerLine Glyphs supported font</h3>
-						</header>
-						<p>
-							Not all fonts support powerline glyphs and ligatures, and if you use any of those unsupported fonts, your powerline will look horrible. 
-							My personal favourite is Microsoft's Cascadia Code. You can download the font from <a href="https://github.com/microsoft/cascadia-code/releases">here</a>. 
-							Make sure you install the powerline version of the font, which has a filename: <code>CascadiaCodePL.ttf</code><br>
-							After that, set the font-face of your terminal to: <code>"Cascadia Code PL"</code><br><br>
-							If you want to try other fonts, you can go to <a href="https://www.nerdfonts.com/">Nerd Fonts</a> and make sure you 
-							get / generate one that includes PowerLine Glyphs.
-						</p>
-						<hr>
-					</section>
-
-					<!-- Fourth Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">Step 4 (For PowerShell users): Install and Enable Powerline</h3>
-						</header>
-						<img src="../images/powerline_powershell.png" alt="" style="max-width: 100%; height: auto;"><br><br>
-						<p>
-							Courtesy to the instructions given in <a href="https://github.com/JanDeDobbeleer/oh-my-posh">this GitHub repository</a>, install Posh-Git and Oh-My-Posh.
-							<pre><code>Install-Module posh-git -Scope CurrentUser
+				<!-- Fourth Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">Step 4 (For PowerShell users): Install and Enable Powerline</h3>
+					</header>
+					<img src="../images/powerline_powershell.png" alt="" style="max-width: 100%; height: auto;"><br><br>
+					<p>
+						Courtesy to the instructions given in <a
+							href="https://github.com/JanDeDobbeleer/oh-my-posh">this GitHub repository</a>, install
+						Posh-Git and Oh-My-Posh.
+					<pre><code>Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser</code></pre>
-							Run these commands from PowerShell or PowerShell Core (in Linux). When you run Install-Module for the first time you'll get a warning that you're 
-							downloading and installing stuff from the internet so follow the prompts appropriately.<br><br>
-							If you're using PowerShell Core, you also need to get <a href="https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-6">PSReadline</a>.
-							Run the following command in PowerShell Core:
-							<pre><code>Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck</code></pre>
-							Then run <code>notepad $PROFILE</code> and add the following lines at the end:
-							<pre><code>Import-Module posh-git
+					Run these commands from PowerShell or PowerShell Core (in Linux). When you run Install-Module for
+					the first time you'll get a warning that you're
+					downloading and installing stuff from the internet so follow the prompts appropriately.<br><br>
+					If you're using PowerShell Core, you also need to get <a
+						href="https://docs.microsoft.com/en-us/powershell/module/psreadline/?view=powershell-6">PSReadline</a>.
+					Run the following command in PowerShell Core:
+					<pre><code>Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck</code></pre>
+					Then run <code>notepad $PROFILE</code> and add the following lines at the end:
+					<pre><code>Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox</code></pre>
-							That "Paradox" at the end is the name of a theme. You can choose your favourite theme from <a href="https://github.com/JanDeDobbeleer/oh-my-posh#themes">here</a>.<br><br>
-							If you want to hide your username@domain when not in a virtual machine, run <code>notepad $PROFILE</code> and add the following line at the top:
-							<pre><code>$DefaultUser = [System.Environment]::UserName</code></pre>
-						</p>
-						<hr>
-					</section>
-					
-					<!-- Fifth Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">Step 4 (For Bash/ZSH users): Install and Enable Powerline</h3>
-						</header>
-						<img src="../images/powerline_bash.png" alt="" style="max-width: 100%; height: auto;"><br><br>
-						<p>
-							My favourite is Powerline-Go, specifically because of its speed and low latency. Courtesy to the instructions given 
-							in <a href="https://github.com/justjanne/powerline-go">this GitHub repository</a>, install Go and then Powerline-Go.
-							<pre><code>sudo apt install golang-go
+					That "Paradox" at the end is the name of a theme. You can choose your favourite theme from <a
+						href="https://github.com/JanDeDobbeleer/oh-my-posh#themes">here</a>.<br><br>
+					If you want to hide your username@domain when not in a virtual machine, run
+					<code>notepad $PROFILE</code> and add the following line at the top:
+					<pre><code>$DefaultUser = [System.Environment]::UserName</code></pre>
+					</p>
+					<hr>
+				</section>
+
+				<!-- Fifth Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">Step 4 (For Bash/ZSH users): Install and Enable Powerline</h3>
+					</header>
+					<img src="../images/powerline_bash.png" alt="" style="max-width: 100%; height: auto;"><br><br>
+					<p>
+						My favourite is Powerline-Go, specifically because of its speed and low latency. Courtesy to the
+						instructions given
+						in <a href="https://github.com/justjanne/powerline-go">this GitHub repository</a>, install Go
+						and then Powerline-Go.
+					<pre><code>sudo apt install golang-go
 go get -u github.com/justjanne/powerline-go</code></pre>
 
-							If you are using Bash, run <code>nano ~/.bashrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
-							<pre><code>GOPATH=$HOME/go
+					If you are using Bash, run <code>nano ~/.bashrc</code> and add the following lines at the end (you
+					may already have a GOPATH so be aware!):
+					<pre><code>GOPATH=$HOME/go
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -error $? -cwd-max-depth 2 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
 }
@@ -137,8 +167,9 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi</code></pre>
 
-							If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following lines at the end (you may already have a GOPATH so be aware!):
-							<pre><code>GOPATH=$HOME/go
+					If you are using ZSH, run <code>nano ~/.zshrc</code> and add the following lines at the end (you may
+					already have a GOPATH so be aware!):
+					<pre><code>GOPATH=$HOME/go
 function powerline_precmd() {
     PS1="$($GOPATH/bin/powerline-go -error $? -shell zsh -cwd-max-depth 2 -hostname-only-if-ssh -modules venv,host,ssh,cwd,perms,git,hg,jobs,exit)"
 }
@@ -156,17 +187,17 @@ if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi</code></pre>
 
-							If you want to view your username@domain, delete the <code>-hostname-only-if-ssh</code> and add a 
-							module <code>user</code> before <code>host</code> int the <code>PS1=</code> line.
-						</p>
-					</section>
-
-
+					If you want to view your username@domain, delete the <code>-hostname-only-if-ssh</code> and add a
+					module <code>user</code> before <code>host</code> int the <code>PS1=</code> line.
+					</p>
 				</section>
 
 
-				<!-- Get Started -->
-				<!-- <section id="cta" class="main special">
+			</section>
+
+
+			<!-- Get Started -->
+			<!-- <section id="cta" class="main special">
 					<header class="major">
 						<h2>Congue imperdiet</h2>
 						<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
@@ -180,44 +211,50 @@ fi</code></pre>
 					</footer>
 				</section> -->
 
-			</div>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<section style="text-align: center;">
-					<img src="../images/square_crop_less.jpg" alt="" style="max-width: 93px; border-radius: 50%;" />
-					<h3 style="font-weight: bold;">Subham Karmakar</h3>
-					<p>Coding / Programming || Cloud || Software || Computers || Football</p>
-					<a href="https://www.subhamk.com" class="button">About Me</a>
-					<a href="https://blogs.subhamk.com" class="button">My Blogs</a>
-					<a href="https://cheatsheets.subhamk.com" class="button">My CheatSheets</a>
-				</section>
-				<section>
-					<h2 style="text-align: center;">Follow</h2>
-					<ul class="icons" style="text-align: center;">
-						<!-- <li><a href="#" class="icon brands fa-twitter alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-facebook-f alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-instagram alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-linkedin-in alt"></a></li> -->
-						<li><a href="https://www.github.com/SubhamK108" class="icon brands fab fa-github alt" title="GitHub"></a></li>
-						<li><a href="https://www.hackerrank.com/SubhamK108" class="icon brands fab fa-hackerrank alt" title="HackerRank"></a></li>
-						<li><a href="https://www.leetcode.com/SubhamK108" class="icon solid fas fa-code alt" title="LeetCode"></a></li>
-					</ul>
-				</section>
-			</footer>
-
 		</div>
 
-		<!-- Scripts -->
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/jquery.scrollex.min.js"></script>
-		<script src="../assets/js/jquery.scrolly.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
-		<script src="../assets/js/themeChanger.js"></script>
-		<script src="../assets/js/index.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<section style="text-align: center;">
+				<img src="../images/square_crop_less.jpg" alt="" style="max-width: 93px; border-radius: 50%;" />
+				<h3 style="font-weight: bold;">Subham Karmakar</h3>
+				<p>Coding / Programming || Cloud || Software || Computers || Football</p>
+				<a href="https://www.subhamk.com" class="button">About Me</a>
+				<a href="../index.html" class="button">My Blogs</a>
+			</section>
+			<section>
+				<h2 style="text-align: center;">Follow</h2>
+				<ul class="icons" style="text-align: center;">
+					<!-- <li><a href="#" class="icon brands fa-facebook-f alt"></a></li> -->
+					<!-- <li><a href="#" class="icon brands fa-instagram alt"></a></li> -->
+					<li><a href="https://www.github.com/SubhamK108" class="icon brands fab fa-github alt"
+							title="GitHub"></a></li>
+					<li><a href="https://www.twitter.com/SubhamK108" class="icon brands fab fa-twitter alt"
+							title="Twitter"></a></li>
+					<li><a href="https://www.linkedin.com/in/subham-karmakar-96024b200/"
+							class="icon brands fab fa-linkedin-in alt" title="LinkedIn"></a></li>
+					<li><a href="https://www.hackerrank.com/SubhamK108" class="icon brands fab fa-hackerrank alt"
+							title="HackerRank"></a></li>
+					<li><a href="https://www.leetcode.com/SubhamK108" class="icon solid fas fa-code alt"
+							title="LeetCode"></a></li>
+				</ul>
+			</section>
+			<p class="copyright">&copy; 2022 Subham Karmakar ● Design: <a href="https://html5up.net">HTML5 UP</a></p>
+		</footer>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script src="../assets/js/themeChanger.js"></script>
+	<script src="../assets/js/index.js"></script>
+
+</body>
+
 </html>

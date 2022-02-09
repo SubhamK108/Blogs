@@ -1,164 +1,190 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>WSL2 Tips & Tricks. How to change the Username, Location and Disk Size of your WSL2 distro</title>
-		<meta name="description" content="Some Tips & Tricks on WSL2. How to change the Username, Location and Disk Size of your WSL2 distro.">
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-		<link rel="manifest" href="../site.webmanifest">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-		<link rel="stylesheet" href="../assets/css/main2.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-	</head>
 
-	<body class="is-preload" onload="GetTheme()">
+<head>
+	<title>WSL2 Tips & Tricks. How to change the Username, Location and Disk Size of your WSL2 distro</title>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title"
+		content="WSL2 Tips & Tricks. How to change the Username, Location and Disk Size of your WSL2 distro" />
+	<meta property="og:title"
+		content="WSL2 Tips & Tricks. How to change the Username, Location and Disk Size of your WSL2 distro" />
+	<!-- <meta property="og:type" content="video.movie" /> -->
+	<meta property="og:url" content="https://blogs.subhamk.com/pages/wsl2.html" />
+	<meta property="og:image" content="https://blogs.subhamk.com/images/square_crop_less.jpg" />
+	<meta property="og:description"
+		content="Some Tips & Tricks on WSL2. How to change the Username, Location and Disk Size of your WSL2 distro." />
+	<meta name="description"
+		content="Some Tips & Tricks on WSL2. How to change the Username, Location and Disk Size of your WSL2 distro.">
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+	<link rel="manifest" href="../site.webmanifest">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="../assets/css/main2.css" />
+	<noscript>
+		<link rel="stylesheet" href="../assets/css/noscript.css" />
+	</noscript>
+</head>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+<body class="is-preload" onload="GetTheme()">
 
-			<!-- Header -->
-			<header id="header">
-				<h1 style="font-size: 2em;">WSL2 Tips & Tricks. How to change the Username, Location and Disk Size of your WSL2 distro</h1>
-				<span class="logo"><img src="../images/square_crop_less.jpg" alt="" style="max-width: 60px; border-radius: 50%;" /></span>
-				<h2>Subham K.</h2>
-				<p>May 6th, 2020</p>
-				<a id="themeSwitch" onclick="ToggleTheme()" class="" style="margin-top: 1.3em;" title="Change Theme"></a>
-			</header>
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				
-			<!-- Main -->
-			<div id="main">
-
-				<!-- Introduction -->
-				<section id="intro" class="main special">
-					<div class="spotlight" style="text-align: left;">
-						<div class="content">
-							<p>
-								These are some of the frequently asked questions regarding WSL 2 (Windows Subsystem for Linux).
-								WSL 2 is a massive improvement over WSL 1. WSL 2 brings Full System-Call Compatibility 
-								and Much Faster I/O Performance. If you want to know about how to install/upgrade to WSL 2, 
-								check out <a href="wsl_install_instructions.html" style="font-weight: bold;">THIS</a> link.
-							</p>
-						</div>
-					</div>
-				</section>
+		<!-- Header -->
+		<header id="header">
+			<h1 style="font-size: 2em;">WSL2 Tips & Tricks. How to change the Username, Location and Disk Size of your
+				WSL2 distro</h1>
+			<span class="logo"><img src="../images/square_crop_less.jpg" alt=""
+					style="max-width: 60px; border-radius: 50%;" /></span>
+			<h2>Subham K.</h2>
+			<p>May 6th, 2020</p>
+			<a id="themeSwitch" onclick="ToggleTheme()" class="" style="margin-top: 1.3em;" title="Change Theme"></a>
+		</header>
 
 
-				<!-- Content -->
-				<section id="content" class="main">
+		<!-- Main -->
+		<div id="main">
 
-					<!-- First Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">How to set Default Username in your distro ?</h3>
-						</header>
-						<ul>
-							Method 1: Using PowerShell<br>
-							<li>Open PowerShell and type the command: <code>distroName config --default-user username</code></li>
-							
-							<br><br>Method 2: Using your distro<br>
-							<li>Command: <code>cd</code></li>
-							<li>Command: <code>touch /etc/wsl.conf</code></li>
-							<li>Command: <code>nano /etc/wsl.conf</code></li><br>
-								Edit the wsl.conf file with the following:
-									<pre><code>[user]
-default=username</code></pre>						
-								Save and Exit<br><br>
-							<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
-							<li>Open your wsl distro to verify change.</li>
-						</ul>
-						<hr>
-					</section>
-
-					<!-- Second Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">How to MOVE your WSL distro (Version 1 or 2) to another drive (outside of C:) ?</h3>
-						</header>
+			<!-- Introduction -->
+			<section id="intro" class="main special">
+				<div class="spotlight" style="text-align: left;">
+					<div class="content">
 						<p>
-							Here I am MOVING my Ubuntu distro from C: drive to a folder in D: drive named "Ubuntu_20.04_LTS"
+							These are some of the frequently asked questions regarding WSL 2 (Windows Subsystem for
+							Linux).
+							WSL 2 is a massive improvement over WSL 1. WSL 2 brings Full System-Call Compatibility
+							and Much Faster I/O Performance. If you want to know about how to install/upgrade to WSL 2,
+							check out <a href="wsl_install_instructions.html" style="font-weight: bold;">THIS</a> link.
 						</p>
-						<ul>
-							<li>Open PowerShell</li>
-							<li>Command: <code>cd D:\</code></li>
-							<li>Command: <code>wsl --export Ubuntu ubuntu-wsl.tar</code></li>
-							[This exports the curent wsl distro (Ubuntu) as a .tar file (ubuntu-wsl.tar in this case)]
-							<li>Command: <code>wsl --unregister Ubuntu</code></li>
-								[This deletes/unregisters the current wsl distro (Ubuntu)]
-							<li>Command: <code>wsl --import Ubuntu .\Ubuntu_20.04_LTS\ .\ubuntu-wsl.tar</code></li>
-								[This imports/creates a new wsl distro named "Ubuntu" inside
-								the folder "Ubuntu_20.04_LTS" using the ubuntu-wsl.tar file]
-							<li>Copy all your files into your home/username/ directory of your wsl distro</li>
-							<li>Command: <code>wsl --set-version Ubuntu 2</code></li>
-								[Converts the wsl distro from version 1 to 2]
-						</ul>
-						<hr>
-					</section>
+					</div>
+				</div>
+			</section>
 
-					<!-- Third Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">How to increase the capacity of the wsl 2 distro (the vhdx capacity) ?</h3>
-						</header>
-						<ul>
-							<li>First check the current capacity of your distro with Command: <code>df -h</code></li>
-							<li>Locate your vhdx file</li><br>
-							    <ul>
-									It's (Ubuntu in my case) default location can be found by:<br>
-									<li>Open PowerShell to get the PackageFamilyName</li>
-									<li>Command: <code>Get-AppxPackage -Name "*Ubuntu*" | Select PackageFamilyName</code></li>
-									<li>Locate the vhdx file: Open RUN > appdata > Local > Packages > PackageFamilyName > LocalState > disk.vhdx</li>
-								</ul>
-							<li>Open PowerShell and type command: <code>diskpart</code></li>
-							<li>Command: <code>Select vdisk file="PathToVHDX"</code></li>
-							<li>Command: <code>expand vdisk maximum="SizeInMB"</code></li>
-							<li>Command: <code>Exit</code></li>
-							<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
-							<li>Open your wsl distro (Ubuntu in my case)</li>
-							<li>Command: <code>sudo mount -t devtmpfs none /dev</code></li>
-							<li>Command: <code>mount | grep ext4</code>
-								[Copy the name of the entry: /dev/sdXX]
-							<li>Command: <code>sudo resize2fs /dev/sdXX</code></li>
-							<li>If resize2fs is not installed then install by command: <code>sudo apt install resize2fs</code></li>
-							<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
-							<li>Open your wsl distro and type following command to verify the change: <code>df -h</code></li>
-						</ul>
-						<hr>
-					</section>
 
-					<!-- Fourth Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">How to change Ownership and Write Permissions of a directory/folder in linux ?</h3>
-						</header>
-						<ul>
-							<li>Command: <code>sudo chown -R username pathToDirectory</code></li>
-								[Changes the Ownership]
-							<li>Command: <code>sudo chmod -R 755 pathToDirectory</code></li>
-								[Changes the Write Permissions]
-						</ul>
-						<hr>
-					</section>
+			<!-- Content -->
+			<section id="content" class="main">
 
-					<!-- Fifth Section -->
-					<section>
-						<header class="major">
-							<h3 style="font-weight: bold;">How to uninstall a wsl distro ?</h3>
-						</header>
-						<ul>
-							<li>Open PowerShell and type: <code>wsl --unregister distroName</code></li>
-							<li>Then manually Uninstall the Microsoft Store App from the Start Menu or Windows Settings.</li>
-						</ul>
-					</section>
+				<!-- First Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">How to set Default Username in your distro ?</h3>
+					</header>
+					<ul>
+						Method 1: Using PowerShell<br>
+						<li>Open PowerShell and type the command: <code>distroName config --default-user username</code>
+						</li>
 
+						<br><br>Method 2: Using your distro<br>
+						<li>Command: <code>cd</code></li>
+						<li>Command: <code>touch /etc/wsl.conf</code></li>
+						<li>Command: <code>nano /etc/wsl.conf</code></li><br>
+						Edit the wsl.conf file with the following:
+						<pre><code>[user]
+default=username</code></pre>
+						Save and Exit<br><br>
+						<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
+						<li>Open your wsl distro to verify change.</li>
+					</ul>
+					<hr>
 				</section>
 
+				<!-- Second Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">How to MOVE your WSL distro (Version 1 or 2) to another drive
+							(outside of C:) ?</h3>
+					</header>
+					<p>
+						Here I am MOVING my Ubuntu distro from C: drive to a folder in D: drive named "Ubuntu_20.04_LTS"
+					</p>
+					<ul>
+						<li>Open PowerShell</li>
+						<li>Command: <code>cd D:\</code></li>
+						<li>Command: <code>wsl --export Ubuntu ubuntu-wsl.tar</code></li>
+						[This exports the curent wsl distro (Ubuntu) as a .tar file (ubuntu-wsl.tar in this case)]
+						<li>Command: <code>wsl --unregister Ubuntu</code></li>
+						[This deletes/unregisters the current wsl distro (Ubuntu)]
+						<li>Command: <code>wsl --import Ubuntu .\Ubuntu_20.04_LTS\ .\ubuntu-wsl.tar</code></li>
+						[This imports/creates a new wsl distro named "Ubuntu" inside
+						the folder "Ubuntu_20.04_LTS" using the ubuntu-wsl.tar file]
+						<li>Copy all your files into your home/username/ directory of your wsl distro</li>
+						<li>Command: <code>wsl --set-version Ubuntu 2</code></li>
+						[Converts the wsl distro from version 1 to 2]
+					</ul>
+					<hr>
+				</section>
 
-				<!-- Get Started -->
-				<!-- <section id="cta" class="main special">
+				<!-- Third Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">How to increase the capacity of the wsl 2 distro (the vhdx
+							capacity) ?</h3>
+					</header>
+					<ul>
+						<li>First check the current capacity of your distro with Command: <code>df -h</code></li>
+						<li>Locate your vhdx file</li><br>
+						<ul>
+							It's (Ubuntu in my case) default location can be found by:<br>
+							<li>Open PowerShell to get the PackageFamilyName</li>
+							<li>Command: <code>Get-AppxPackage -Name "*Ubuntu*" | Select PackageFamilyName</code></li>
+							<li>Locate the vhdx file: Open RUN > appdata > Local > Packages > PackageFamilyName >
+								LocalState > disk.vhdx</li>
+						</ul>
+						<li>Open PowerShell and type command: <code>diskpart</code></li>
+						<li>Command: <code>Select vdisk file="PathToVHDX"</code></li>
+						<li>Command: <code>expand vdisk maximum="SizeInMB"</code></li>
+						<li>Command: <code>Exit</code></li>
+						<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
+						<li>Open your wsl distro (Ubuntu in my case)</li>
+						<li>Command: <code>sudo mount -t devtmpfs none /dev</code></li>
+						<li>Command: <code>mount | grep ext4</code>
+							[Copy the name of the entry: /dev/sdXX]
+						<li>Command: <code>sudo resize2fs /dev/sdXX</code></li>
+						<li>If resize2fs is not installed then install by command:
+							<code>sudo apt install resize2fs</code>
+						</li>
+						<li>Open PowerShell and type command: <code>wsl --shutdown</code></li>
+						<li>Open your wsl distro and type following command to verify the change: <code>df -h</code>
+						</li>
+					</ul>
+					<hr>
+				</section>
+
+				<!-- Fourth Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">How to change Ownership and Write Permissions of a
+							directory/folder in linux ?</h3>
+					</header>
+					<ul>
+						<li>Command: <code>sudo chown -R username pathToDirectory</code></li>
+						[Changes the Ownership]
+						<li>Command: <code>sudo chmod -R 755 pathToDirectory</code></li>
+						[Changes the Write Permissions]
+					</ul>
+					<hr>
+				</section>
+
+				<!-- Fifth Section -->
+				<section>
+					<header class="major">
+						<h3 style="font-weight: bold;">How to uninstall a wsl distro ?</h3>
+					</header>
+					<ul>
+						<li>Open PowerShell and type: <code>wsl --unregister distroName</code></li>
+						<li>Then manually Uninstall the Microsoft Store App from the Start Menu or Windows Settings.
+						</li>
+					</ul>
+				</section>
+
+			</section>
+
+
+			<!-- Get Started -->
+			<!-- <section id="cta" class="main special">
 					<header class="major">
 						<h2>Congue imperdiet</h2>
 						<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
@@ -172,44 +198,50 @@ default=username</code></pre>
 					</footer>
 				</section> -->
 
-			</div>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<section style="text-align: center;">
-					<img src="../images/square_crop_less.jpg" alt="" style="max-width: 93px; border-radius: 50%;" />
-					<h3 style="font-weight: bold;">Subham Karmakar</h3>
-					<p>Coding / Programming || Cloud || Software || Computers || Football</p>
-					<a href="https://www.subhamk.com" class="button">About Me</a>
-					<a href="https://blogs.subhamk.com" class="button">My Blogs</a>
-					<a href="https://cheatsheets.subhamk.com" class="button">My CheatSheets</a>
-				</section>
-				<section>
-					<h2 style="text-align: center;">Follow</h2>
-					<ul class="icons" style="text-align: center;">
-						<!-- <li><a href="#" class="icon brands fa-twitter alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-facebook-f alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-instagram alt"></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-linkedin-in alt"></a></li> -->
-						<li><a href="https://www.github.com/SubhamK108" class="icon brands fab fa-github alt" title="GitHub"></a></li>
-						<li><a href="https://www.hackerrank.com/SubhamK108" class="icon brands fab fa-hackerrank alt" title="HackerRank"></a></li>
-						<li><a href="https://www.leetcode.com/SubhamK108" class="icon solid fas fa-code alt" title="LeetCode"></a></li>
-					</ul>
-				</section>
-			</footer>
-
 		</div>
 
-		<!-- Scripts -->
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/jquery.scrollex.min.js"></script>
-		<script src="../assets/js/jquery.scrolly.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
-		<script src="../assets/js/themeChanger.js"></script>
-		<script src="../assets/js/index.js"></script>
+		<!-- Footer -->
+		<footer id="footer">
+			<section style="text-align: center;">
+				<img src="../images/square_crop_less.jpg" alt="" style="max-width: 93px; border-radius: 50%;" />
+				<h3 style="font-weight: bold;">Subham Karmakar</h3>
+				<p>Coding / Programming || Cloud || Software || Computers || Football</p>
+				<a href="https://www.subhamk.com" class="button">About Me</a>
+				<a href="../index.html" class="button">My Blogs</a>
+			</section>
+			<section>
+				<h2 style="text-align: center;">Follow</h2>
+				<ul class="icons" style="text-align: center;">
+					<!-- <li><a href="#" class="icon brands fa-facebook-f alt"></a></li> -->
+					<!-- <li><a href="#" class="icon brands fa-instagram alt"></a></li> -->
+					<li><a href="https://www.github.com/SubhamK108" class="icon brands fab fa-github alt"
+							title="GitHub"></a></li>
+					<li><a href="https://www.twitter.com/SubhamK108" class="icon brands fab fa-twitter alt"
+							title="Twitter"></a></li>
+					<li><a href="https://www.linkedin.com/in/subham-karmakar-96024b200/"
+							class="icon brands fab fa-linkedin-in alt" title="LinkedIn"></a></li>
+					<li><a href="https://www.hackerrank.com/SubhamK108" class="icon brands fab fa-hackerrank alt"
+							title="HackerRank"></a></li>
+					<li><a href="https://www.leetcode.com/SubhamK108" class="icon solid fas fa-code alt"
+							title="LeetCode"></a></li>
+				</ul>
+			</section>
+			<p class="copyright">&copy; 2022 Subham Karmakar ● Design: <a href="https://html5up.net">HTML5 UP</a></p>
+		</footer>
 
-	</body>
+	</div>
+
+	<!-- Scripts -->
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/jquery.scrolly.min.js"></script>
+	<script src="../assets/js/browser.min.js"></script>
+	<script src="../assets/js/breakpoints.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script src="../assets/js/themeChanger.js"></script>
+	<script src="../assets/js/index.js"></script>
+
+</body>
+
 </html>
